@@ -1,0 +1,29 @@
+agent chart wireframe
+cognitive service provides the score
+service providers
+
+userchat with bot:
+- while chatting recommendations
+
+
+user:
+python, react-js or next js, Typescripting Tsx
+DB: Nosql
+UI/UX: Bootstrap, tailwind css
+
+
+
+Agent:
+ReactJs
+Sql
+Python
+
+Key Metrics
+Total Active Queries: Number of ongoing queries.
+Queries Resolved Today: Number of queries resolved by the agent today.
+Average Response Time: Average time taken to respond to queries.
+Customer Satisfaction Score: Rating based on user feedback.
+
+
+05/07/2024
+Clean Architecture
