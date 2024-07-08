@@ -27,3 +27,38 @@ Customer Satisfaction Score: Rating based on user feedback.
 
 05/07/2024
 Clean Architecture
+
+
+entity - domain layer              -- schema 
+repositories - crud operations
+usecases - application
+controllers - presentation      --endpoints  
+
+
+#dfe1f1  -- Card
+#5058e5 -- Button
+#666ee2 -- Text color
+#f5f5f5 -- Page BG (Light grey)
+#d5d8f2 -- Selected item BG (Navbar selection)
+
+#d2d4f1
+
+agile ceremony - within a time period how much you can deliver
+
+sprint retrospective - what you learnt
+sprint refinement - planning for next sprint
+
+
+Scrum:
+------
+1. Daily Stand up
+2. Backlog refinement (Twice in a week) Product Owner(PO)/PM responsibility to add required task for all developers
+	For example:
+	Title: Add an endpoint to pass the msg between the BOT & Agent:
+	-> Acceptance criterias
+	-> Dependecies
+	-> Additional References are needed.
+	
+3. Sprint Planning (Starting of next sprint)
+4. Sprint review/Demo (End of each sprint)
+5. Sprint Retrospective (End of each sprint)
