@@ -40,7 +40,7 @@ controllers - presentation      --endpoints
 #666ee2 -- Text color
 #f5f5f5 -- Page BG (Light grey)
 #d5d8f2 -- Selected item BG (Navbar selection)
-
+#d5d8f2 -- hover color
 #d2d4f1
 
 agile ceremony - within a time period how much you can deliver

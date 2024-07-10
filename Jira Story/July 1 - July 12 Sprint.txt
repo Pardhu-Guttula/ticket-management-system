@@ -1,0 +1,50 @@
+Summary: Develop Agent Ticket Management System - Frontend and Integration Tasks
+
+Description:
+
+We are working as a team on the Agent Ticket Management System. Here is the progress and tasks undertaken:
+
+Case Management System:
+Created cards for the case management system.
+Included routing for navigation of pages within the case management page.
+Made the design responsive.
+
+
+
+Acceptance Criteria:
+
+Initial Planning:
+Wireframes are created and reviewed.
+Tech stacks are selected and documented.
+Team understands clean architecture and SOLID principles.
+Team is familiar with Agile ceremonies and Jira story creation.
+
+Database and UI Development:
+Database schema is created and implemented in MySQL.
+UI design is finalized using Tailwind CSS and React JS.
+Frontend implementation is started with tasks divided among team members.
+
+Case Management System:
+Cards for All Tickets, Active Tickets, and Closed Tickets are created and functional.
+Routing is implemented for seamless navigation.
+Design is responsive across different devices.
+
+Upcoming Task:
+Code need to be integrated from other team members.
+Work on creating the layout for the bot page.
+Ensure the layout is consistent with the overall design of the application.
+
+
+
+Tasks:
+Create wireframes and decide on tech stacks.
+Explore clean architecture and SOLID principles.
+Learn about Agile ceremonies and Jira story creation.
+Create and implement the database schema.
+Finalize and implement the UI design.
+Develop the case management system:
+Create cards for different ticket statuses.
+Implement routing for navigation.
+Make the design responsive.
+Integrate code with team contributions.
+Develop the layout for the bot page.
