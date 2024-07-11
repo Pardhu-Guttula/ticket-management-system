@@ -23,20 +23,12 @@ function AllCard() {
       description: "Short Description 3",
       priority: "Low",
     },
-    {
-      id: 4,
-      userName: "User 4",
-      description: "Short Description 3",
-      priority: "Low",
-    },
   ];
 
   return (
-    <div className="mt-1">
-      {/* Nav bar */}
-      <nav className="flex justify-between items-center bg-grey text-white px-4 py-2">
+    <div className="mt-1 flex flex-col">
+      <div className="flex justify-between items-start bg-grey text-white">
         <div className="text-lg font-bold"></div>
-        {/* View toggle buttons */}
         <div className="flex space-x-2">
           <button
             className={`p-1 ${
@@ -55,18 +47,16 @@ function AllCard() {
             <FaList size={16} />
           </button>
         </div>
-      </nav>
+      </div>
 
-      {/* Content area */}
-      <div className="relative">
-        {/* Conditional rendering based on view */}
+      <div className="container mx-auto">
         <div className="mt-4">
           {view === "grid" ? (
-            <div className="grid gap-4 sm:gap-6 md:gap-8 lg:gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            <div className=" grid gap-4 sm:gap-6 md:gap-8 lg:gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
               {cards.map((card) => (
                 <div
                   key={card.id}
-                  className="container mx-auto px-4 pt-5 pb-2 bg-card relative max-w-sm overflow-hidden rounded-md shadow-lg group transition-transform duration-300 hover:scale-105"
+                  className="p-4 bg-card relative max-w-sm overflow-hidden rounded-md shadow-lg transition-transform duration-300 hover:scale-105"
                 >
                   <h3 className="font-bold">Ticket ID: {card.id}</h3>
                   <h2>{card.userName}</h2>
@@ -86,7 +76,7 @@ function AllCard() {
                 {cards.map((card) => (
                   <div
                     key={card.id}
-                    className="container mx-auto px-4 py-5 bg-card relative max-w-11/12 overflow-hidden rounded-md shadow-lg transition-transform duration-300 hover:scale-105 flex justify-between items-center mb-4"
+                    className="p-4 bg-card relative max-w-full overflow-hidden rounded-md shadow-lg flex justify-between items-center mb-4 transition-transform duration-300 hover:scale-105"
                     style={{ height: "calc(100% + 1rem)" }}
                   >
                     <div>

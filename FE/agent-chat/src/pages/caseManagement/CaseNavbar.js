@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NavBar = () => {
+const CaseNavbar = ({ isSidebarOpen }) => {
   return (
     <nav className="bg-[#e9ecef] p-4">
       <div className="container mx-auto flex flex-wrap justify-between items-center">
@@ -29,19 +29,19 @@ const NavBar = () => {
 
         <div className="w-full md:w-auto flex flex-wrap justify-center md:justify-end space-y-2 md:space-y-0 space-x-2 md:space-x-5">
           <Link
-            to="/"
+            to="/AllCases"
             className="text-white bg-normal-button hover:bg-hover-button px-3 py-2 rounded-md text-sm font-medium block md:inline mt-2 md:mt-0"
           >
             All Tickets
           </Link>
           <Link
-            to="/activeTickets"
+            to="/ActiveCases"
             className="text-white bg-normal-button hover:bg-hover-button px-3 py-2 rounded-md text-sm font-medium block md:inline mt-2 md:mt-0"
           >
             Active Tickets
           </Link>
           <Link
-            to="/closedTickets"
+            to="/ClosedCases"
             className="text-white bg-normal-button hover:bg-hover-button px-3 py-2 rounded-md text-sm font-medium block md:inline mt-2 md:mt-0"
           >
             Closed Tickets
@@ -52,4 +52,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default CaseNavbar;

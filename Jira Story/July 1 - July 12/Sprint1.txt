@@ -48,3 +48,23 @@ Implement routing for navigation.
 Make the design responsive.
 Integrate code with team contributions.
 Develop the layout for the bot page.
+
+
+
+from july1 to july 12 jira story:
+
+We are working as a team on Agent ticket management system. 
+Firstly we created frameworks and decided tech stacks need to be used. 
+Next we created db schema using Mysql, 
+
+explored about clean architectire and solid 
+
+Next We decided UI for Frontend, 
+Next started to implement frontend by dividing work among ourselves.
+
+
+My task is to work on case management system where i have created cards and included routing for navigation of pages in case management page itself.
+Next made it responsive. 
+
+Next Integrated the code with team who are working on the same page. Next made it responsive. 
+For the remaining days I have to work on creation of layout for bot page

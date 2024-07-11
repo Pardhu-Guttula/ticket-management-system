@@ -1,0 +1,3 @@
+Layout for user and Bot and Layout for user and Agent:
+1. Added bg image for both chats 
+2. Alignment of that image and adjusting opacity of the image took time.
