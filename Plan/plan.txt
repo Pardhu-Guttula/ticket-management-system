@@ -62,3 +62,7 @@ Scrum:
 3. Sprint Planning (Starting of next sprint)
 4. Sprint review/Demo (End of each sprint)
 5. Sprint Retrospective (End of each sprint)
+
+charts
+critical tickets which are in progress
+Monthly/weekly progress  how many tickets have been completed
