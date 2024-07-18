@@ -10,22 +10,31 @@ function AllCard() {
   const [caseType, setCaseType] = useState(1); // State to manage case type
 
   useEffect(() => {
-    // Fetch data from the backend
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          `http://localhost:5000/api/cases?caseType=${caseType}`
-        );
-        setCards(response.data);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
     fetchData();
-  }, [caseType]);
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(
+        "http://localhost:5000/api/cases?caseType=1"
+      );
+      setCards(response.data);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleAcceptCase = async (caseId) => {
+    try {
+      await axios.put(`http://localhost:5000/api/cases/accept/${caseId}`);
+      console.log("Case status updated successfully");
+      fetchData(); // Fetch updated data after successful update
+    } catch (error) {
+      console.error("Error updating case status:", error.message);
+    }
+  };
 
   if (loading) {
     return <div>Loading...</div>; // Show loading state
@@ -69,7 +78,7 @@ function AllCard() {
                   <div>
                     <h3>
                       <span className="font-bold">Ticket ID:</span>{" "}
-                      <span>{card.id}</span>
+                      <span>{card.caseId}</span>
                     </h3>
                     <h2>
                       <span className="font-bold">User Name:</span>{" "}
@@ -85,7 +94,10 @@ function AllCard() {
                     </h2>
                   </div>
                   <div className="flex justify-center">
-                    <button className="text-white bg-normal-button hover:bg-hover-button font-bold py-2 px-4 rounded">
+                    <button
+                      className="text-white bg-normal-button hover:bg-hover-button font-bold py-2 px-4 ml-4 rounded"
+                      onClick={() => handleAcceptCase(card.caseId)} // Pass case id to the function
+                    >
                       Accept
                     </button>
                   </div>
@@ -105,7 +117,7 @@ function AllCard() {
                       <div className="flex-1 min-w-0">
                         <h3>
                           <span className="font-bold">Ticket ID:</span>{" "}
-                          <span>{card.id}</span>
+                          <span>{card.caseId}</span>
                         </h3>
                         <h2 className="break-words">
                           <span className="font-bold">Short Description:</span>{" "}
@@ -114,7 +126,10 @@ function AllCard() {
                           {card.caseDescription}
                         </span>
                       </div>
-                      <button className="text-white bg-normal-button hover:bg-hover-button font-bold py-2 px-4 ml-4 rounded">
+                      <button
+                        className="text-white bg-normal-button hover:bg-hover-button font-bold py-2 px-4 ml-4 rounded"
+                        onClick={() => handleAcceptCase(card.caseId)} // Pass case id to the function
+                      >
                         Accept
                       </button>
                     </div>
