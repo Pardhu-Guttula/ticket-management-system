@@ -13,7 +13,7 @@ function ActiveCard() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/cases?caseType=2" // Assuming caseType 2 is for active cases
+          `${process.env.REACT_APP_API_URL}/api/cases?caseType=2` // Assuming caseType 2 is for active cases
         );
         setCards(response.data);
       } catch (err) {

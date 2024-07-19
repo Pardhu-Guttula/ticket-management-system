@@ -16,7 +16,7 @@ function AllCard() {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/cases?caseType=1"
+        `${process.env.REACT_APP_API_URL}/api/cases?caseType=1`
       );
       setCards(response.data);
     } catch (err) {
@@ -28,7 +28,9 @@ function AllCard() {
 
   const handleAcceptCase = async (caseId) => {
     try {
-      await axios.put(`http://localhost:5000/api/cases/accept/${caseId}`);
+      await axios.put(
+        `${process.env.REACT_APP_API_URL}/api/cases/accept/${caseId}`
+      );
       console.log("Case status updated successfully");
       fetchData(); // Fetch updated data after successful update
     } catch (error) {
@@ -72,7 +74,7 @@ function AllCard() {
             <div className="grid gap-4 sm:gap-6 md:gap-8 lg:gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
               {cards.map((card) => (
                 <div
-                  key={card.id}
+                  key={card.caseId}
                   className="p-4 bg-card relative overflow-hidden rounded-md shadow-lg group transition-transform duration-300 hover:scale-105 flex flex-col justify-between"
                 >
                   <div>

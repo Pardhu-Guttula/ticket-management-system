@@ -1,0 +1,58 @@
+version: "3.7"
+
+services:
+  frontend:
+    image: react-img:latest
+    networks:
+      - mynetwork
+    restart: always
+    depends_on:
+      - backend
+
+  backend:
+    image: express-img:latest
+    depends_on:
+      - mysql
+    networks:
+      - mynetwork
+    environment:
+      - DB_HOST=mysql
+      - DB_USER=admin
+      - DB_PASSWORD=root
+      - DB_NAME=agent
+      - DB_PORT=3306
+    restart: always
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - mysql
+      - backend
+      - frontend
+    networks:
+      - mynetwork
+    restart: always
+
+  mysql:
+    image: mysql:latest
+    networks:
+      - mynetwork
+    volumes:
+      - ./mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=agent
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=root
+    restart: always
+
+networks:
+  mynetwork:
+    name: full-stack
+    driver: bridge
