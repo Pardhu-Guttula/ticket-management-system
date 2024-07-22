@@ -16,7 +16,7 @@ function AllCard() {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_API_URL}/api/cases?caseType=1`
+        `${process.env.REACT_APP_API_URL}/api/cases?caseType=Pending`
       );
       setCards(response.data);
     } catch (err) {
